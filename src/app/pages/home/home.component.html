@@ -1,0 +1,50 @@
+<h2>Pontos de venda cadastrado</h2>
+
+
+    <p>Não há nenhum ponto cadastrado.</p>
+
+
+<hr>
+
+<h2>Cadastre um novo ponto de venda</h2>
+<form >
+    <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input type="text" matInput placeholder="Ex. Churros todo dia">
+    </mat-form-field>
+
+    <div class="double-field">
+        <mat-form-field appearance="fill">
+            <mat-label>Estado</mat-label>
+            <mat-select formControlName="estado">
+                <mat-option ></mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Cidade</mat-label>
+            <mat-select [disabled]="isDisabledCidade" formControlName="cidade">
+                <mat-option></mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Ponto de venda</mat-label>
+        <input type="text" matInput placeholder="Ex. Praça dos Estudantes" >
+    </mat-form-field>
+
+    <div class="double-field">
+        <mat-form-field appearance="fill">
+            <mat-label>Começa às</mat-label>
+            <input type="time" matInput >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Termina às</mat-label>
+            <input type="time" matInput >
+        </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary">Cadastrar</button>
+</form>
